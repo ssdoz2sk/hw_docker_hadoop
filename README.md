@@ -24,11 +24,20 @@ chown: missing operand after `/usr/local/hadoop/logs'
 Try `chown --help' for more information.
 ```
 
+## 遇到的坑
+1. sequenceiq/hadoop-docker 預設安裝會當做 master 並在本機開啟
+  所以每一台開起來都要先關閉再修改，一怒之下就寫了個 Dockerfile
+2. 每次 `docker run` Host 名稱都不一樣，為了統一、可辨識度高、及修改參數，增加 -h 參數，其他設定檔就不需再用script取代文字
+3. Slave 名稱不可相同，於是寫了個小 script 去讓使用者指定 slave 的 Hostname
+4. Dockerfile 內使用 run 去開啟 sshd 服務不知為何不可行、於是寫在 bootstrap.sh 內
+5. master 原先會遇到 Namenode 開不起來 port 已被占用問題，但用 netstat 查詢無任何程式在使用
+  使用 `$HADOOP_PREFIX/bin/hdfs namenode -format` 解決，不知為何
+6. 尋找能讓 master 重新讀取 Datanode Live 的方式，每次重開實在太麻煩了
+
 ## 附註
 
 1. 一個群集只能建一個 master
 2. 防火牆請記得開洞
 3. 其他的 WordCount 的 Code 自己打
-
 
 ### 所有問題除了同組別同學外，不回應直到星期一課程結束
