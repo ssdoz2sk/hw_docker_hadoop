@@ -25,4 +25,10 @@ Try `chown --help' for more information.
 ```
 
 ## 附註
+
+1. 一個群集只能建一個 master
+2. 防火牆請記得開洞
+3. 其他的 WordCount 的 Code 自己打
+
+
 ### 所有問題除了同組別同學外，不回應直到星期一課程結束
