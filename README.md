@@ -11,10 +11,11 @@
    # docker build -t "ssdoz2sk/hadoop-docker-homework:0.1"  .
   ```
 5. 推送到 docker hub 方便每台部屬
-5. 修改 start-master.sh 內的 自己的 Hostname 跟對應的 IP 還有 Docker Repository 名稱
-6. 修改 start-slave.sh 內的 自己的 Hostname 跟對應的 IP 還有 Docker Repository 名稱
-7. 先至每一台，除了 master 執行 `start-slave.sh <slave name>`
-8. 最後到 master 執行 `master-slave.sh`
+6. 修改 start-master.sh 內的 自己的 Hostname 跟對應的 IP 還有 Docker Repository 名稱
+7. 修改 start-slave.sh 內的 自己的 Hostname 跟對應的 IP 還有 Docker Repository 名稱
+8. 先至每一台，除了 master 執行 `start-slave.sh <slave name>`
+9. 最後到 master 執行 `master-slave.sh`
+10. 進入執行中個體請使用 `docker exec -it hadoop-master/hadoop-slave bash`
 
 ## 已知 BUG
 * Master 執行時出現一個錯誤，目前找不出由哪個 script 的問題
