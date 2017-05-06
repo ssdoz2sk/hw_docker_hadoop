@@ -17,7 +17,6 @@
 8. 最後到 master 執行 `master-slave.sh`
 
 ## 已知 BUG
-* Master 的 Datanode 沒開啟成功
 * Master 執行時出現一個錯誤，目前找不出由哪個 script 的問題
 ```
 chown: missing operand after `/usr/local/hadoop/logs'

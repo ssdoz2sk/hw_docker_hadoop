@@ -22,7 +22,7 @@ docker run --name hadoop-master \
 	-p 1099:1099 \
 	-h master \
 	--add-host="slave-eric:10.16.173.161" \
-	--add-host="slave-jimmy:10.16.173.171" \
+	--add-host="slave-jimmy:127.0.0.1" \
 	--add-host="slave-iris:10.16.173.173" \
 	--add-host="slave-ysy:10.16.173.175" \
 	-v /docker/hadoop:/opt/hadoop \
