@@ -35,4 +35,4 @@ docker run --name hadoop-slave \
 	--add-host="slave-ysy:10.16.173.175" \
 	-v /docker/hadoop:/opt/hadoop \
 	-d \
-	-it ssdoz2sk/hadoop-docker-homework:0.1 /etc/bootstrap-slave.sh -d
+	-it ssdoz2sk/hadoop-docker-homework:0.1.1 /etc/bootstrap-slave.sh -d

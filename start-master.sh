@@ -27,5 +27,5 @@ docker run --name hadoop-master \
 	--add-host="slave-iris:10.16.173.173" \
 	--add-host="slave-ysy:10.16.173.175" \
 	-v /docker/hadoop:/opt/hadoop \
-	-d
-	-it ssdoz2sk/hadoop-docker-homework:0.1 /etc/bootstrap.sh -d
+	-d \
+	-it ssdoz2sk/hadoop-docker-homework:0.1.1 /etc/bootstrap.sh -d
